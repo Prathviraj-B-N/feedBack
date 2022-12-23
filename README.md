@@ -1,1 +1,7 @@
-The app lets people give you feedback or send you some message, It will be stored on a blockchain.
+Hardhat - Provides local setup to simulate blockchain
+solidity - used to define smart-contract
+
+scripts 
+        - used to compile smart contract
+        - deploy on local chain ( I know this is stupid 😭)
+        - execute transactions
