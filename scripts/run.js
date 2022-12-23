@@ -1,8 +1,8 @@
 const main = async ()=> {
-    waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
-    waveContract = await waveContractFactory.deploy();
-    await waveContract.deployed();
-    console.log("Contract deployed to ",waveContract.address );
+    const pingMsgContractFactory = await hre.ethers.getContractFactory("PingMsgContract");
+    const pingMsgContract = await pingMsgContractFactory.deploy();
+    await pingMsgContract.deployed();
+    console.log("Contract deployed on ",pingMsgContract.address);
 }
 
 const runMain = async () => {
