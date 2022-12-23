@@ -4,13 +4,19 @@ const main = async ()=> {
     const pingMsgContract = await pingMsgContractFactory.deploy();
     await pingMsgContract.deployed();
     
-    console.log(`Contract deployed on ${pingMsgContract.address} by ${sampleOwner}`);
+    console.log(`Contract deployed on ${pingMsgContract.address} by ${sampleOwner.address}`);
 
     let count = await pingMsgContract.getMsgCount();
 
     const msgTxn = await pingMsgContract.pingMe();
     await msgTxn.wait();
     count = await pingMsgContract.getMsgCount();
+
+    const connectSamplePerson = await pingMsgContract.connect(samplePerson);
+    const msgTxn2 = await connectSamplePerson.pingMe();
+    await msgTxn2.wait();
+
+    await pingMsgContract.getMsgCount();
 
 
 }
