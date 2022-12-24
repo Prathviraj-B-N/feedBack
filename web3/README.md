@@ -9,3 +9,6 @@ scripts
 npx hardhat node
 npx hardhat run scripts/deploy.js --network localhost
 npx hardhat run scripts/run.js
+
+QuickNode 
+        - essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible.
