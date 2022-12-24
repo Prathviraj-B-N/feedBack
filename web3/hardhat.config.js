@@ -13,8 +13,8 @@ module.exports = {
   solidity: "0.8.17",
   networks: {
     goerli: {
-      url: "https://black-sleek-seed.ethereum-goerli.discover.quiknode.pro/a24ea5f6eb6714decf75728db5704e9860956728/",
-      accounts: [process.env.PRIVATE_KEY]
+      url: process.env.ACCESS_TOKEN,
+      accounts: [process.env.ACCOUNT_ADDR]
     }
   }
 };
